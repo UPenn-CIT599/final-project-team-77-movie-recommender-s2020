@@ -14,7 +14,7 @@ public class Recommender {
 			if((movieData.get(i).getGenre().contains(genre) || genre.contains("0")) && 
 					(movieData.get(i).getActors().contains(actors) || actors.contains("0")) ||
 					(movieData.get(i).getDirector().contains(director) || director.contains("0")) && 
-					(movieData.get(i).getMovieRating() >= rating || !(rating < 10 && rating > 0))) {
+					(movieData.get(i).getMovieRating() <= rating && !(rating < 10 && rating > 0))) {
 				//Ensuring the year range is respected
 				if(year == 1 && movieData.get(i).getMovieYear() < 1930) {
 					finalRecommendations.add(movieData.get(i));
