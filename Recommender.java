@@ -17,22 +17,22 @@ public class Recommender {
 					(movieData.get(i).getMovieRating() >= rating || !(rating < 10 && rating > 0))) {
 				//Ensuring the year range is respected
 				if(year == 1 && movieData.get(i).getMovieYear() < 1930) {
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				else if(year == 2 &&  1929 < movieData.get(i).getMovieYear() && movieData.get(i).getMovieYear() < 1960) {
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				else if(year == 3 &&  1959 < movieData.get(i).getMovieYear() && movieData.get(i).getMovieYear() < 1980) {
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				else if(year == 4 &&  1979 < movieData.get(i).getMovieYear() && movieData.get(i).getMovieYear() < 2000) {
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				else if(year == 5 &&  1999 < movieData.get(i).getMovieYear() && movieData.get(i).getMovieYear() < 2020) {
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				else if(!(year < 5 && year > 0)){
-					finalRecommendations.add(counter,movieData.get(i));
+					finalRecommendations.add(movieData.get(i));
 				}
 				
 			}
