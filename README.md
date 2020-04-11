@@ -14,4 +14,4 @@ unzip movie_metadata.csv.zip
 
 head -1 movie_metadata.csv |tr ',' '\n'
 
-[intellij] run program
+[Eclipse] run program
