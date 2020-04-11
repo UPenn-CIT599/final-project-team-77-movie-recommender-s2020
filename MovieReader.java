@@ -1,3 +1,9 @@
+  
+/**
+ * @Author: Team 77 (Manuel Moreno, Vy Nguyen, Musen Wen)
+ * Date: 04/10/2020
+ * Class: MCIT Spring 2020
+ */
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,6 +14,10 @@ import java.util.regex.Pattern;
 public class MovieReader {
 	private HashMap<Integer, Movie> movieData;
 	int blankData = 0;
+	/**
+	 * Inside the MovieReader class, we have a MovieReader function that returns a HashMap.
+	 * The movie reader function reads the entire csv file and store the data into a movieData hashmap.
+	 */
 
 	public HashMap<Integer, Movie> MovieReader(String movieFile) {
 		File userFile = new File(movieFile);
