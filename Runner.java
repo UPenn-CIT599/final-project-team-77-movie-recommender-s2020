@@ -19,8 +19,7 @@ public class Runner {
 		*/
 		//Intro text and questions. We want inputs from users, specifically genre, year, rating, actors, director, and number of movie recommendations.
 		System.out.println("Hello! Welcome to our Movie Recommendation System. \nWe have over 80,000 movies waiting for you. "
-				+ "\n\nPlease answer the following questions so that we may customize our recommendations. If you"
-				+ "feel indifferent towards any of the following questions, please enter 0.");
+				+ "\n\nPlease answer the following questions so that we may customize our recommendations.");
 		Scanner userInputScanner = new Scanner(System.in);
 		//Question 1: Genre
 		System.out.println("Which genre do you prefer? Choose 1 genre.");
@@ -72,7 +71,7 @@ public class Runner {
 	* This method checks that the user inputs a string.
 	*/
 	public static String checkStringInput(String input) {
-		while(!(input.matches("[a-zA-Z]+")))
+		while(!(input.matches("[a-zA-Z\\s\'\"]+")))
 		{
 			Scanner userInputScanner = new Scanner(System.in);
 			System.out.println("Please enter a word.");
