@@ -22,20 +22,32 @@ public class Runner {
 				+ "\n\nPlease answer the following questions so that we may customize our recommendations. If you"
 				+ "feel indifferent towards any of the following questions, please enter 0.");
 		Scanner userInputScanner = new Scanner(System.in);
-
-		System.out.println("Which genre do you prefer?");
+		//Question 1: Genre
+		System.out.println("Which genre do you prefer? Choose 1 genre.");
 		String genre = userInputScanner.nextLine();
+		
+		//Question 2: Year
 		System.out.println("Which year range would you like? \nSelect a number: \n1. 1900-1929 \n2. 1930-1959 \n3. 1960-1979"
 				+ "\n4. 1980-1999 \n5. 2000-2019");
 		int year = Integer.parseInt(userInputScanner.nextLine());
+		while(year>5 || year <0)
+		{
+			System.out.println("Please enter 1 - 5. ");
+			year = Integer.parseInt(userInputScanner.nextLine());
+		}
+		//Question 3: Rating
 		System.out.println("In terms of movie rating (from 1-10), what is the minimum rating your movies should have?");
 		double rating = Integer.parseInt(userInputScanner.nextLine());
+		//Question 4: Cast
 		System.out.println("Which actor or actress would you like the movie cast to have, if any? Please write his/her name in this format, (Firstname Lastname)");
 		String actors = userInputScanner.nextLine();
+		//Question 5: Director
 		System.out.println("Which director would you like the movie to have? Please write his/her name in this format, (Firstname Lastname)");
 		String director = userInputScanner.nextLine();
+		//Question 6: Number of Movies
 		System.out.println("How many movie recommendations would you like to see? The default is 5 movie recommendations.");
 		int numberOfMovies = Integer.parseInt(userInputScanner.nextLine());
+		//Done
 		System.out.println("Thank you for your input! Your recommendations are loading...");
 		
 		//Comparing the input with the movie database. Disregarding other variables.
