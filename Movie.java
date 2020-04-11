@@ -21,8 +21,8 @@ public class Movie {
 	 * @param director
 	 * @param actors
 	 * 
-	 * Movie class has a constructor which defines movieTitle, movieRating, genre, movieYear, director, actors
-	 * we also created getter functions to return each parameter.
+	 * Movie class has a constructor which defines movieTitle, movieRating, genre, movieYear, director, and actors.
+	 * We also created getter functions to return each parameter.
 	 */
 	public Movie(String movieTitle, double movieRating, String genre, int movieYear,
 			String director, String actors) {
