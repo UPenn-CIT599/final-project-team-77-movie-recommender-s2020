@@ -6,13 +6,7 @@
 
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-import static org.hamcrest.CoreMatchers.containsString;
-
-
-
-import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
@@ -55,7 +49,7 @@ class RecommenderTest {
 		assertEquals("Snow White", a);
 		
 		String b = r.RandomPull(3, r.CompareInput("Western", 2, 2.0, "Margo","Henry Hathaway")).get(0).getMovieTitle();
-		assertEquals("Granny Get Your Gun", b);
+		assertTrue(b.equals("From Hell to Texas")||b.equals("Granny Get Your Gun"));
 		
 		String c = r.RandomPull(2, r.CompareInput("War", 3, 2.0, "Robert Hundar","Umberto Lenzi")).get(0).getMovieTitle();
 		assertEquals("La legione dei dannati", c);
