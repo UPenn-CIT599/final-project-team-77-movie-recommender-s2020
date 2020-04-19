@@ -37,7 +37,7 @@ public class Recommender {
 			//Ensuring genre, rating and (actor or director) criteria is met - if it is empty it stores all
 			if(movieData.get(i).getGenre().contains(genre) && actorsAndDirectors > 0 &&
 					(movieData.get(i).getActors().contains(actors) || movieData.get(i).getDirector().contains(director)) && 
-					movieData.get(i).getMovieRating() <= rating)
+					movieData.get(i).getMovieRating() >= rating)
 			{
 				
 				//Ensuring the year range is respected

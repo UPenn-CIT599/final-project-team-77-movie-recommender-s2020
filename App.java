@@ -11,7 +11,7 @@ public class App {
 	SwingUtilities.invokeLater(new Runnable() { // anonymous method
 		public void run() {
 			JFrame frame = new Frame("Movie Recommendation Engine");
-			frame.setSize(1000,2000);
+			frame.setSize(1350,1000);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setVisible(true);
 		}

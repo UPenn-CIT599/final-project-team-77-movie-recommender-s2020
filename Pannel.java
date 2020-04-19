@@ -24,7 +24,7 @@ public class Pannel extends JPanel {
 		this.recommend = new Recommender();
 		Dimension size = getPreferredSize();
 		size.width = 1000;
-		size.height = 300;
+		size.height = 500;
 		setPreferredSize(size);
 		
 		setBorder(BorderFactory.createTitledBorder("Your selection criteria"));
@@ -43,7 +43,7 @@ public class Pannel extends JPanel {
 		JTextField directorField = new JTextField(20);
 		JTextField numOfMovieField = new JTextField(20);
 		
-		JButton button = new JButton("Give me movie recomendations!");
+		JButton button = new JButton("Get My Movie Recomendation!!");
 		
 		button.addActionListener(new ActionListener() {
 			
@@ -52,10 +52,12 @@ public class Pannel extends JPanel {
 				// TODO Auto-generated method stub
 				String genre = genreField.getText();
 				int year = Integer.parseInt(yearField.getText());
-				double rating = Double.parseDouble(ratingField.getText());
+				// set up default as 1
+				double rating = Double.parseDouble(ratingField.getText().length() >=1 ? ratingField.getText() : "1");
 				String actors = castField.getText();
 				String director = directorField.getText();
-				int numberOfMovies = Integer.parseInt(numOfMovieField.getText());
+				// set up default as 5
+				int numberOfMovies = Integer.parseInt(numOfMovieField.getText().length() >=1 ? numOfMovieField.getText() : "5");
 				
 				// passing the main function's logic to here
 				StringBuilder recommended = new StringBuilder("");
@@ -151,8 +153,9 @@ public class Pannel extends JPanel {
 		// final row
 		gc.weighty = 3;
 		
-		gc.fill = GridBagConstraints.BOTH;
+		gc.fill = GridBagConstraints.SOUTH;
 		gc.anchor = GridBagConstraints.FIRST_LINE_START;
+		gc.weightx = 4;
 		gc.gridx = 1;
 		gc.gridy = 6;
 		add(button,gc);	
