@@ -46,9 +46,9 @@ public class MovieReader {
 				//Splitting the column data
 				String movieTitle = columnData[1];
 				int movieYear = Integer.parseInt(columnData[3]);
-				String genre = columnData[5].replaceAll("\"", "");
-				String director = columnData[9];
-				String actors = columnData[12].replaceAll("\"", "");
+				String genre = (columnData[5].replaceAll("\"", "")).toLowerCase();
+				String director = columnData[9].toLowerCase();
+				String actors = (columnData[12].replaceAll("\"", "")).toLowerCase();
 				double movieRating = Double.parseDouble(columnData[14]);
 				Movie m = new Movie(movieTitle, movieRating, genre, movieYear,
 						director, actors);
