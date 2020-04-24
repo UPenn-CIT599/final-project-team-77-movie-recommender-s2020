@@ -1,0 +1,20 @@
+MCIT 591 Final Project
+TITLE: MOVIE RECOMMENDER
+Members: Musen Wen, Manuel Moreno, Vy Nguyen
+
+SUMMARY:
+Using Java (Eclipse IDE), we created a Movie Recommender that generates a list of movie for the user based on multiple criterias, such as genre, year, rating, actors, director, and number of movie recommendations. Our movie_metadata.csv file contains more than 80,000 movie titles from 1900 to 2020. We primarily wrote 4 classes: Runner.java, Movie.java, Recommender.java, and MovieReader.java. We also wrote an extensive JUnit test for each respective class. To learn more about each class, please refer to the detailed JavaDoc comment in each of the .java file. At the end of the project, we created a simple User Interface that allows the user to enter inputs and receive a list of movie recommendations.
+
+CLASSES: 
+1. Runner.java - This is the main method of the Movie Recommender program. In this method, we prompt the users for inputs such as genre, year, rating, actors, director, and number of movie recommendations.Based on the inputs, we call the Compare Input function from the Recommender Class to receive an array of suitable movies.After generating a list of suitable movies, we call the RandomPull function to return a random top 5 movies from the suitable movie list. At the end, we print a list of 5 movie recommendations to the user. 
+2. Movie.java - Movie class has a constructor which defines movieTitle, movieRating, genre, movieYear, director, and actors. We also created getter functions to return each parameter.
+3. Recommender.java - This class Recommender has a function called the Compare Input function, which receives inputs from the user. After the input is received, we created a Hashmap to receive a list of movie from the movie_metadata.csv file, which contains more than 80,000 movies. Then, we created an empty ArrayList called finalRecommendations to store a specific list of movie that meets criterias. To check the criterias, we created if functions with the condition of specific genre, actor, director, movie rating, and year range. This class Recommender also has another function called RandomPull, which receives 2 parameters (int numberOfMovies, ArrayList<Movie> movieArray) and returns an Arraylist. In the RandomPull function, it shuffles the movie list.  After shuffling, we ensured that the arraylist contains sufficient number of movies that the user wants. If not, the maximum number of movies that met the criteria will be the movie array size. At the end, we returned an arraylist randomFinalMovies that met the criterias. 
+4. Inside the MovieReader class, we have a MovieReader function that returns a HashMap. The movie reader function reads the entire csv file and store the data into a movieData.
+
+TEAM CONTRIBUTION: 
+
+Overall: From the start of the initial proposal to the final project admission, all three team members communicated well with each other, offered support, and contributed their fair share. Even though each member juggles with classes and full-time jobs, they are also very organized and focused on goals and results.  
+
+Manuel Moreno: Completed the framework for all 4 classes. Actively debugged and fixed codes.
+Vy Nguyen: Assisted Manuel with the codes, debugged, wrote JUnit tests and Javadoc comments for all 4 classes, and completed the team summary document.
+Musen Wen: Fixed codes, completed the UI and Readme file for Movie Recommender 
